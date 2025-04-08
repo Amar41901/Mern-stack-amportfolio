@@ -1,0 +1,38 @@
+.footer {
+  background: linear-gradient(to right, #667eea, #461378);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #ffeb3b;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  font-size: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

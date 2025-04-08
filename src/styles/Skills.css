@@ -1,0 +1,110 @@
+/* Skills.css */
+
+.skills-container {
+    background: linear-gradient(to right, #667eea, #764ba2); /* Matching gradient */
+    color: #fff;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .skills-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffeb3b; /* Highlighted title color */
+    animation: fadeIn 1s ease-in-out; /* Adding fade-in animation */
+  }
+  
+  .skills-intro,
+  .skills-outro {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .skill-item {
+    position: relative;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    border-radius: 10px;
+    animation: slideInLeft 1s ease-in-out; /* Slide-in animation */
+    overflow: hidden;
+  }
+  
+  .skill-item:nth-child(odd) {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  .skill-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeb3b; /* Matching the accent color */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 0.9rem;
+    background: linear-gradient(90deg, #c9b70e, #ffeb3b); /* Gradient for progress */
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out; /* Adding animation to progress bars */
+  }
+  
+  .skill-item:hover .progress {
+    transform: scaleX(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

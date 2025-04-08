@@ -1,0 +1,102 @@
+.education-container {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffeb3b;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ffeb3b;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: calc(50% + 1rem);
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-content {
+    margin-left: 1.5rem;
+    color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .timeline-content h2 {
+    font-size: 1.5rem;
+    color: #ffeb3b;
+    transition: color 0.3s ease;
+  }
+  
+  .timeline-content p {
+    margin: 0.5rem 0;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

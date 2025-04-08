@@ -1,0 +1,314 @@
+/* Home.css */
+
+/* General container styles */
+.home-container {
+  background: linear-gradient(to right, #667eea, #764ba2); /* Vibrant gradient */
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Intro section styling */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+/* Headline text */
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffeb3b; /* Highlight color */
+  animation: slideInLeft 1s ease-in-out; /* Slide-in animation for headline */
+}
+
+.intro .lead-text {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+.learn-more-btn {
+  background-color: #ffeb3b;
+  color: #333;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #fff;
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+/* Details section */
+.details {
+  max-width: 800px;
+  text-align: center;
+  animation: slideInUp 1s ease-in-out; /* Slide-up animation for details */
+}
+
+.details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffeb3b;
+}
+
+.details a {
+  color: #ffeb3b;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.details a:hover {
+  color: #fff; /* Hover color change */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Profile photo styling */
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #ffeb3b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  animation: bounceIn 1.5s ease-in-out, pulseEffect 3s infinite;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.2) rotate(10deg); /* Slight rotation and zoom effect */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  filter: brightness(1.2) saturate(1.5); /* Brighten and increase saturation */
+}
+
+.profile-photo img:hover::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 6px solid rgba(255, 235, 59, 0.6);
+  border-radius: 50%;
+  animation: glowEffect 2s infinite; /* Glow effect after hover */
+}
+
+/* Advanced animations */
+
+/* Glow effect */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.6);
+  }
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pulsating effect */
+@keyframes pulseEffect {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.popup-form h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-btn {
+  background: #667eea;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #764ba2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-alert-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.custom-alert-box h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.custom-alert-box p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.close-alert-btn {
+  background: #667eea;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-alert-btn:hover {
+  background: #764ba2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
